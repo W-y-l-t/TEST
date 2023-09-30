@@ -66,3 +66,6 @@
 
 #### 6. f846cf8f0845268c5d3c32a460335600a743e8f8 (HEAD -> new_features_409537) 
 - [Feat] Add documentation and comments to the project
+
+#### 6. ef14722cc0dec60c056aeb86713e2960bcc1d9f3 (HEAD -> main) 
+- [Feat] Add comments to the readme.m
