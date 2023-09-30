@@ -1,6 +1,6 @@
 # **Geometric Lib**
 
-## **Circle**
+## **Circle** - contains functions for working with a circle 
 
 ### *Functions*
 
@@ -13,7 +13,7 @@
 - def perimetr(10) ->> 62,831853
 ##
 
-## **Square**
+## **Square** - contains functions for working with a square
 
 ### *Functions*
 
@@ -25,7 +25,7 @@
 - def perimetr(7) ->> 28
 ##
 
-## **Triangle**
+## **Triangle** - contains functions for working with a triangle
 
 ### *Functions*
 
@@ -36,7 +36,7 @@
 - def area(8, 2) ->> 8
 - def perimetr(1, 13, 7) ->> 21
 
-## **Rectangle**
+## **Rectangle** - contains functions for working with a rectangle
 
 ### *Functions*
 
