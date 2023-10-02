@@ -70,7 +70,7 @@ p = perimeter(1, 13, 7) # p = 21
 def area(a, b):
     return a * b
 
-def perometer(a, b):
+def perimeter(a, b):
     return (a + b) * 2
     
 a = area(10, 10) # a = 100
