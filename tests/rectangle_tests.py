@@ -46,6 +46,26 @@ class RectangleTestCase(unittest.TestCase):
         expected_result = 2.0
         self.assertEqual(expected_result, result)
 
+    def test_wrong_data_perimeter_1(self):
+        result = perimeter("1", 29387)
+        expected_result = TypeError
+        self.assertNotEqual(expected_result, result)
+
+    def test_wrong_data_perimeter_2(self):
+        result = perimeter(-1, -2974)
+        expected_result = ArithmeticError
+        self.assertNotEqual(expected_result, result)
+
+    def test_wrong_data_area_1(self):
+        result = area("1", 0.3)
+        expected_result = TypeError
+        self.assertNotEqual(expected_result, result)
+
+    def test_wrong_data_area_2(self):
+        result = area(-1, -1.2)
+        expected_result = ArithmeticError
+        self.assertNotEqual(expected_result, result)
+
 
 if __name__ == '__main__':
     unittest.main()
