@@ -1,5 +1,5 @@
 def area(a, b):
-    '''
+    """
     Returns the area of the rectangle according to the specified parameters of the sides.
 
         Parameters:
@@ -9,12 +9,17 @@ def area(a, b):
 
         Return value:
                 area (float/ int): the area of a rectangle with sides a, b
-                
-    '''
-    return a * b 
+
+    """
+    if not isinstance(a, int) and not isinstance(a, float) or not isinstance(b, int) and not isinstance(b, float):
+        return TypeError
+    elif a < 0 or b < 0:
+        return ArithmeticError
+    return a * b
+
 
 def perimeter(a, b):
-    '''
+    """
     Returns the perimeter of the rectangle according to the specified parameters of the sides.
 
         Parameters:
@@ -23,6 +28,10 @@ def perimeter(a, b):
 
         Return value:
                 perimeter (float / int): the perimeter of a rectangle with sides a, b
-                
-    '''
+
+    """
+    if not isinstance(a, int) and not isinstance(a, float) or not isinstance(b, int) and not isinstance(b, float):
+        return TypeError
+    elif a <= 0 or b <= 0:
+        return ArithmeticError
     return (a + b) * 2

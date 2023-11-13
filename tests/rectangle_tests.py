@@ -1,6 +1,7 @@
 import unittest
 
 from methods.rectangle import *
+from resourсes.epsilon import *
 
 
 class RectangleTestCase(unittest.TestCase):
@@ -24,6 +25,12 @@ class RectangleTestCase(unittest.TestCase):
         expected_result = 12193263111263526900
         self.assertEqual(expected_result, result)
 
+    def test_float_area(self):
+        result = area(0.5, 0.2)
+        expected_result = 0.1
+        epsilon = get_epsilon(expected_result, result)
+        self.assertGreaterEqual(1e-6, epsilon)
+
     def test_large_data_perimeter(self):
         result = perimeter(1234567890, 9876543210)
         expected_result = 22222222200
@@ -32,6 +39,11 @@ class RectangleTestCase(unittest.TestCase):
     def test_square_perimeter(self):
         result = perimeter(1000, 1000)
         expected_result = 4000
+        self.assertEqual(expected_result, result)
+
+    def test_float_perimeter(self):
+        result = perimeter(0.5, 0.5)
+        expected_result = 2.0
         self.assertEqual(expected_result, result)
 
 
