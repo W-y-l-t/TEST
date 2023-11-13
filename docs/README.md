@@ -115,3 +115,6 @@ p = perimeter(7, 2) # p = 18
 | ***29989df*** | File rectangle.py moved to the methods folder        |
 | ***952252b*** | File square.py moved to the methods folder           | 
 | ***8467e48*** | File triangle.py moved to the methods folder         | 
+| ***7adbd5d*** | [Feat] Unit tests and methods big update             |
+| ***3a667da*** | [Feat] rectangle_tests.py and square_tests.py update |
+| ***72e5af5*** | [Delete] __pycache__ files was deleted               |
