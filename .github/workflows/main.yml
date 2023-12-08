@@ -38,6 +38,6 @@ jobs:
       
       - name: Run tests
         run: |
-          set PYTHONPATH=%PYTHONPATH%;"D:\a\TEST\TEST\methods";"D:\a\TEST\TEST\resources"
+          set PYTHONPATH=%PYTHONPATH%;D:\a\TEST\TEST\methods;D:\a\TEST\TEST\resources
           pip install pytest
           pytest
