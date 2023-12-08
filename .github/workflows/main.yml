@@ -9,6 +9,23 @@ on:
   workflow_dispatch:
 
 jobs:
+  test_ubuntu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      
+      - name: Run tests
+        run: |
+          export PYTHONPATH=$PYTHONPATH:"/home/runner/work/TEST/TEST/methods"
+          export PYTHONPATH=$PYTHONPATH:"/home/runner/work/TEST/TEST/resources"
+          pip install pytest
+          pytest
+          
   test_windows:
     runs-on: windows-latest
 
@@ -21,6 +38,6 @@ jobs:
       
       - name: Run tests
         run: |
-          $env:PYTHONPATH='D:\a\TEST\TEST\methods;D:\a\TEST\TEST\resources'
+          $env:PYTHONPATH="D:\a\TEST\TEST\methods"
           pip install pytest
           pytest
