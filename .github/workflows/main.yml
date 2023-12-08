@@ -38,6 +38,7 @@ jobs:
       
       - name: Run tests
         run: |
-          set PYTHONPATH=%PYTHONPATH%;"D:\a\Users\username\TEST\TEST\methods"
-          set PYTHONPATH=%PYTHONPATH%;"D:\a\Users\username\TEST\TEST\resources"
+          set PATH=C:\hostedtoolcache\windows\Python\3.12.0\x64;%PATH%
+          set PYTHONPATH=%PYTHONPATH%;"D:\a\Users\username\TEST\TEST\methods";"D:\a\Users\username\TEST\TEST\resources"
+          python
           python tests/circle_test.py
