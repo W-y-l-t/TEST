@@ -21,7 +21,7 @@ jobs:
       
       - name: Run tests
         run: |
-          bash export PYTHONPATH=’/home/runner/work/TEST/TEST/methods’
+          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods’
           pip install pytest
           pytest
 
