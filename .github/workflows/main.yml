@@ -22,8 +22,10 @@ jobs:
       
       - name: Run tests
         run: |
-          pip install pytest
-          pytest tests/tests_start.py
+          tests/tests_circle.py
+          tests/tests_triangle.py
+          tests/tests_rectangle.py
+          tests/tests_square.py
 
   test_windows:
     runs-on: windows-latest
