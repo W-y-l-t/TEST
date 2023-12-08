@@ -37,8 +37,4 @@ jobs:
           python-version: "3.x"
       
       - name: Run tests
-        run: |
-          export PYTHONPATH="/home/runner/work/TEST/TEST/methods"
-          export PYTHONPATH="/home/runner/work/TEST/TEST/resources"
-          pip install pytest
-          pytest
+        run: tests/test_start.py
