@@ -1,5 +1,8 @@
 import unittest
 
+import sys
+sys.path.append(r"D:\a\TEST\TEST\methods")
+
 from methods.circle import *
 from resourсes.epsilon import *
 
