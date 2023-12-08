@@ -37,4 +37,8 @@ jobs:
           python-version: "3.x"
       
       - name: Run tests
-        run: run tests/test_start.py
+        run: |
+          tests/circle_test.py
+          tests/square_test.py
+          tests/triangle_test.py
+          tests/rectangle_test.py
