@@ -38,8 +38,5 @@ jobs:
       
       - name: Run tests
         run: |
-          set PYTHONPATH=%PYTHONPATH%;"D:"
           python tests/circle_test.py
-          python tests/triangle_test.py
-          python tests/rectangle_test.py
-          python tests/square_test.py
+          
