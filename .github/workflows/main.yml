@@ -38,7 +38,4 @@ jobs:
       
       - name: Run tests
         run: |
-          $env:PYTHONPATH='"D:\a\TEST\TEST\methods";"D:\a\TEST\TEST\resources"'
-          set PYTHONPATH="D:\a\TEST\TEST\methods";"D:\a\TEST\TEST\resources"
-          pip install pytest
-          pytest
+          python tests/circle_test.py
