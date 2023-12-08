@@ -30,14 +30,15 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: "3.x"
       
       - name: Run tests
         run: |
           $env:PYTHONPATH='"D:\a\TEST\TEST\methods";"D:\a\TEST\TEST\resources"'
+          set PYTHONPATH="D:\a\TEST\TEST\methods";"D:\a\TEST\TEST\resources"
           pip install pytest
           pytest
