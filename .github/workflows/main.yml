@@ -21,10 +21,10 @@ jobs:
       
       - name: Run tests
         run: |
-          ../tests/circle_tests.py
-          ../tests/rectangle_tests.py
-          ../tests/square_tests.py
-          ../tests/triangle_tests.py
+          tests/circle_tests.py
+          tests/rectangle_tests.py
+          tests/square_tests.py
+          tests/triangle_tests.py
 
   test_windows:
     runs-on: windows-latest
@@ -38,7 +38,7 @@ jobs:
       
       - name: Run tests
         run: |
-          ../tests/circle_tests.py
-          ../tests/rectangle_tests.py
-          ../tests/square_tests.py
-          ../tests/triangle_tests.py
+          tests/circle_tests.py
+          tests/rectangle_tests.py
+          tests/square_tests.py
+          tests/triangle_tests.py
