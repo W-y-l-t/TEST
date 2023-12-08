@@ -38,7 +38,7 @@ jobs:
       
       - name: Run tests
         run: |
-          export PYTHONPATH="{$PYTHONPATH}:/home/runner/work/TEST/TEST/methods"
-          export PYTHONPATH="{$PYTHONPATH}:/home/runner/work/TEST/TEST/resources"
+          setx PYTHONPATH={$PYTHONPATH}:"/home/runner/work/TEST/TEST/methods"
+          setx PYTHONPATH={$PYTHONPATH}:"/home/runner/work/TEST/TEST/resources"
           pip install pytest
           pytest
