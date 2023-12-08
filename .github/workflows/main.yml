@@ -21,7 +21,10 @@ jobs:
       
       - name: Run tests
         run: |
-          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods’
+          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods/circle.py’
+          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods/rectangle.py’
+          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods/square.py’
+          export PYTHONPATH=’/home/runner/work/TEST/TEST/methods/triangle.py’
           pip install pytest
           pytest
 
