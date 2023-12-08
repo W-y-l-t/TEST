@@ -21,7 +21,9 @@ jobs:
           architecture: "x64"
       
       - name: Run tests
-        run: tests/tests_start.py
+        run: |
+          pip install pytest
+          pytest tests/tests_start.py
 
   test_windows:
     runs-on: windows-latest
