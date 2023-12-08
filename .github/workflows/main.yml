@@ -38,7 +38,5 @@ jobs:
       
       - name: Run tests
         run: |
-          tests/circle_test.py
-          tests/square_test.py
-          tests/triangle_test.py
-          tests/rectangle_test.py
+          pip install pytest
+          pytest
