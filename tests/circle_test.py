@@ -1,7 +1,9 @@
 import unittest
+import circle
 
-from methods import circle
-from resourсes import epsilon
+
+def get_epsilon(expected_result, result):
+    return abs(expected_result - result) / max(1, abs(result))
 
 
 class CircleTestCase(unittest.TestCase):
@@ -13,25 +15,25 @@ class CircleTestCase(unittest.TestCase):
     def test_small_data_area(self):
         result = circle.area(239)
         expected_result = 179450.91396570255
-        eps = epsilon.get_epsilon(expected_result, result)
+        eps = get_epsilon(expected_result, result)
         self.assertGreaterEqual(1e-6, eps)
 
     def test_large_data_area(self):
         result = circle.area(1234567890)
         expected_result = 4788283183070884321.4200489057006
-        eps = epsilon.get_epsilon(expected_result, result)
+        eps = get_epsilon(expected_result, result)
         self.assertGreaterEqual(1e-6, eps)
 
     def test_large_data_perimeter(self):
         result = circle.perimeter(1234567890)
         expected_result = 7757018827.1637039278901849710357
-        eps = epsilon.get_epsilon(expected_result, result)
+        eps = get_epsilon(expected_result, result)
         self.assertGreaterEqual(1e-6, eps)
 
     def test_small_data_perimeter(self):
         result = circle.perimeter(30)
         expected_result = 188.49555921538757
-        eps = epsilon.get_epsilon(expected_result, result)
+        eps = get_epsilon(expected_result, result)
         self.assertGreaterEqual(1e-6, eps)
 
     def test_zero_perimeter(self):
